@@ -13,6 +13,7 @@ struct MainView: View {
     
     var body: some View {
         VStack {
+            Image("logo-app")
             Button {
                 //TODO
             } label: {
