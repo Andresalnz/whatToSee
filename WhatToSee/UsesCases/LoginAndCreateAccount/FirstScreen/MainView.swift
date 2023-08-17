@@ -11,23 +11,21 @@ struct MainView: View {
     //Detecta configuracion de modo oscuro o claro del iPhone
     @Environment(\.colorScheme) var colorScheme
     
+    //ViewModel
+    @ObservedObject var viewModel: FirstScreenViewModel
+    
     var body: some View {
-        VStack {
-            Image("logo-app")
-            Button {
-                //TODO
-            } label: {
-                Text("Crear Cuenta".uppercased())
+        NavigationView {
+            VStack {
+                Image("logo-app")
+                NavigationLink("Inicia Sesion", destination: LoginView())
                     .frame(width: 370, height: 50)
                     .font(.title)
                     .foregroundColor(.white)
                     .background(.blue)
                     .cornerRadius(10)
-            }
-            Button {
-                //TODO
-            } label: {
-                Text("Iniciar Sesion".uppercased())
+                
+                NavigationLink("Crear Cuenta", destination: CreateAccountView())
                     .frame(width: 370, height: 50)
                     .font(.title)
                     .foregroundColor(.white)
@@ -40,8 +38,8 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
-        MainView()
+        MainView(viewModel: FirstScreenViewModel())
+        MainView(viewModel: FirstScreenViewModel())
             .previewDevice("iPhone 14")
             
     }
