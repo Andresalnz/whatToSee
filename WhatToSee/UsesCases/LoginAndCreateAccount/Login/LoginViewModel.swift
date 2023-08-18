@@ -9,11 +9,7 @@ import Foundation
 
 final class LoginViewModel: ObservableObject {
     
-    private let router: FirstScreenRouter
-    
-    init(router: FirstScreenRouter) {
-        self.router = router
-    }
+   
     
     
 }
