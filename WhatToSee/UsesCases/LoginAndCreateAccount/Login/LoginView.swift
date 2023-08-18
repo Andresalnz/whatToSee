@@ -8,8 +8,122 @@
 import SwiftUI
 
 struct LoginView: View {
+    //Detecta configuracion de modo oscuro o claro del iPhone
+    @Environment(\.colorScheme) var colorScheme
+    
+    @State var email = ""
+    @State var password = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack(alignment: .center) {
+                Text("WhatToSee")
+                    .font(.title)
+                    .bold()
+                
+                Image("logo-app")
+                    .resizable().scaledToFit()
+                    .frame(width: 100)
+                    .padding(.bottom, 15)
+                
+                TextField(text: $email, prompt: Text("Correo")) {
+                }
+                .keyboardType(.emailAddress)
+                .autocapitalization(.none)
+                .padding(8)
+                .font(.headline)
+                .background(Color.gray.opacity(0.3))
+                .cornerRadius(8)
+                .padding(.horizontal, 60)
+                
+                
+                SecureField(text: $password, prompt: Text("Contraseña")) {
+                    
+                }
+                .keyboardType(.emailAddress)
+                .autocapitalization(.none)
+                .padding(8)
+                .font(.headline)
+                .background(Color.gray.opacity(0.3))
+                .cornerRadius(8)
+                .padding(.horizontal, 60)
+                
+                HStack(alignment: .center) {
+                    Button {
+                        //
+                    } label: {
+                        Text("Iniciar sesion")
+                    }
+                    .padding(8)
+                    .font(.title2)
+                    .foregroundColor(.white)
+                    .background(.green)
+                    .cornerRadius(8)
+                    .padding(.top,15)
+                    .padding(.bottom,15)
+                    
+                    Button {
+                        //
+                    } label: {
+                        Text("Cancelar")
+                    }
+                    .padding(8)
+                    .font(.title2)
+                    .foregroundColor(.white)
+                    .background(.gray)
+                    .cornerRadius(8)
+                    .padding(.top,15)
+                    .padding(.bottom,15)
+                }
+                
+                HStack(alignment: .center) {
+                    VStack {
+                        Divider()
+                            .frame(height: 1)
+                            .background(.gray)
+                    }
+                    .padding(20)
+                    Text("or")
+                        .font(.callout)
+                        .foregroundColor(.black)
+                    
+                    
+                    
+                    VStack {
+                        Divider()
+                            .frame(height: 1)
+                            .background(.gray)
+                        
+                    }
+                    .padding(20)
+                }
+                
+                Button {
+                    //
+                } label: {
+                    Text("Iniciar sesion con Facebook")
+                }
+                .frame(width: 300, height: 50)
+                .font(.title2)
+                .foregroundColor(.white)
+                .background(.blue)
+                .cornerRadius(10)
+                
+                Button {
+                    //
+                } label: {
+                    Text("Iniciar sesion con Apple")
+                }
+                .frame(width: 300, height: 50)
+                .font(.title2)
+                .foregroundColor(.white)
+                .background(.black)
+                .cornerRadius(10)
+                
+                NavigationLink("¿No tiene cuenta? Create una", destination: CreateAccountView())
+            }
+            .padding(.bottom, 100)
+        }
     }
 }
 
