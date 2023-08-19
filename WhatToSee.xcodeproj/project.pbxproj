@@ -11,6 +11,9 @@
 		9F0F2AE92A8F85A60051534A /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F2AE82A8F85A60051534A /* CreateAccountViewModel.swift */; };
 		9F0F2AEC2A8F89C70051534A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F2AEB2A8F89C70051534A /* HomeView.swift */; };
 		9F0F2AEE2A8F89E40051534A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F2AED2A8F89E40051534A /* HomeViewModel.swift */; };
+		9F0F2AF32A90C5120051534A /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F2AF22A90C5120051534A /* TextFieldView.swift */; };
+		9F0F2AF52A90C9120051534A /* SecureFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F2AF42A90C9120051534A /* SecureFieldView.swift */; };
+		9F0F2AF72A90CBE60051534A /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F2AF62A90CBE60051534A /* ButtonView.swift */; };
 		9FDCC08C2A8E312000344E96 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDCC08B2A8E312000344E96 /* LoginView.swift */; };
 		9FDCC08E2A8E313600344E96 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDCC08D2A8E313600344E96 /* CreateAccountView.swift */; };
 		9FDDD18A2A8CE5440037F36D /* WhatToSeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDDD1892A8CE5440037F36D /* WhatToSeeApp.swift */; };
@@ -36,6 +39,9 @@
 		9F0F2AE82A8F85A60051534A /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
 		9F0F2AEB2A8F89C70051534A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9F0F2AED2A8F89E40051534A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		9F0F2AF22A90C5120051534A /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		9F0F2AF42A90C9120051534A /* SecureFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureFieldView.swift; sourceTree = "<group>"; };
+		9F0F2AF62A90CBE60051534A /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		9FDCC08B2A8E312000344E96 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		9FDCC08D2A8E313600344E96 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		9FDDD1862A8CE5440037F36D /* WhatToSee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatToSee.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +81,16 @@
 				9F0F2AED2A8F89E40051534A /* HomeViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		9F0F2AEF2A90C17F0051534A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9F0F2AF22A90C5120051534A /* TextFieldView.swift */,
+				9F0F2AF42A90C9120051534A /* SecureFieldView.swift */,
+				9F0F2AF62A90CBE60051534A /* ButtonView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		9FDCC0892A8E310900344E96 /* Login */ = {
@@ -138,6 +154,7 @@
 			children = (
 				9F0F2AEA2A8F89BD0051534A /* Home */,
 				9FDDD1B42A8D342B0037F36D /* LoginAndCreateAccount */,
+				9F0F2AEF2A90C17F0051534A /* Components */,
 			);
 			path = UsesCases;
 			sourceTree = "<group>";
@@ -245,14 +262,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F0F2AF52A90C9120051534A /* SecureFieldView.swift in Sources */,
 				9FDDD18C2A8CE5440037F36D /* ContentView.swift in Sources */,
 				9F0F2AEC2A8F89C70051534A /* HomeView.swift in Sources */,
 				9FDCC08C2A8E312000344E96 /* LoginView.swift in Sources */,
 				9F0F2AEE2A8F89E40051534A /* HomeViewModel.swift in Sources */,
 				9FDDD18A2A8CE5440037F36D /* WhatToSeeApp.swift in Sources */,
+				9F0F2AF72A90CBE60051534A /* ButtonView.swift in Sources */,
 				9FDCC08E2A8E313600344E96 /* CreateAccountView.swift in Sources */,
 				9F0F2AE92A8F85A60051534A /* CreateAccountViewModel.swift in Sources */,
 				9F0F2AE52A8E345F0051534A /* LoginViewModel.swift in Sources */,
+				9F0F2AF32A90C5120051534A /* TextFieldView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
