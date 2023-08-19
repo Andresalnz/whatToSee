@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		9F0F2AE52A8E345F0051534A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F2AE42A8E345F0051534A /* LoginViewModel.swift */; };
+		9F0F2AE92A8F85A60051534A /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F2AE82A8F85A60051534A /* CreateAccountViewModel.swift */; };
+		9F0F2AEC2A8F89C70051534A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F2AEB2A8F89C70051534A /* HomeView.swift */; };
+		9F0F2AEE2A8F89E40051534A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F2AED2A8F89E40051534A /* HomeViewModel.swift */; };
 		9FDCC08C2A8E312000344E96 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDCC08B2A8E312000344E96 /* LoginView.swift */; };
 		9FDCC08E2A8E313600344E96 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDCC08D2A8E313600344E96 /* CreateAccountView.swift */; };
 		9FDDD18A2A8CE5440037F36D /* WhatToSeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDDD1892A8CE5440037F36D /* WhatToSeeApp.swift */; };
@@ -30,6 +33,9 @@
 
 /* Begin PBXFileReference section */
 		9F0F2AE42A8E345F0051534A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		9F0F2AE82A8F85A60051534A /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
+		9F0F2AEB2A8F89C70051534A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		9F0F2AED2A8F89E40051534A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		9FDCC08B2A8E312000344E96 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		9FDCC08D2A8E313600344E96 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		9FDDD1862A8CE5440037F36D /* WhatToSee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatToSee.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +68,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F0F2AEA2A8F89BD0051534A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9F0F2AEB2A8F89C70051534A /* HomeView.swift */,
+				9F0F2AED2A8F89E40051534A /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		9FDCC0892A8E310900344E96 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				9FDCC08D2A8E313600344E96 /* CreateAccountView.swift */,
+				9F0F2AE82A8F85A60051534A /* CreateAccountViewModel.swift */,
 			);
 			path = CreateAccount;
 			sourceTree = "<group>";
@@ -120,6 +136,7 @@
 		9FDDD1B22A8D32480037F36D /* UsesCases */ = {
 			isa = PBXGroup;
 			children = (
+				9F0F2AEA2A8F89BD0051534A /* Home */,
 				9FDDD1B42A8D342B0037F36D /* LoginAndCreateAccount */,
 			);
 			path = UsesCases;
@@ -229,9 +246,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FDDD18C2A8CE5440037F36D /* ContentView.swift in Sources */,
+				9F0F2AEC2A8F89C70051534A /* HomeView.swift in Sources */,
 				9FDCC08C2A8E312000344E96 /* LoginView.swift in Sources */,
+				9F0F2AEE2A8F89E40051534A /* HomeViewModel.swift in Sources */,
 				9FDDD18A2A8CE5440037F36D /* WhatToSeeApp.swift in Sources */,
 				9FDCC08E2A8E313600344E96 /* CreateAccountView.swift in Sources */,
+				9F0F2AE92A8F85A60051534A /* CreateAccountViewModel.swift in Sources */,
 				9F0F2AE52A8E345F0051534A /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
