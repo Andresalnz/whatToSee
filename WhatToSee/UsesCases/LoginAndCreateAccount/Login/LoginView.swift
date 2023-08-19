@@ -122,6 +122,7 @@ struct LoginView: View {
                 .cornerRadius(10)
                 
                 NavigationLink("¿No tiene cuenta? Create una", destination: CreateAccountView(viewModel: viewModelCreateAccount))
+                    .padding(8)
             }
             .padding(.bottom, 100)
         }
