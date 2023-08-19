@@ -31,4 +31,8 @@ final class LoginViewModel: ObservableObject {
         }
    }
     
+    func cancelAction() {
+        
+    }
+    
 }

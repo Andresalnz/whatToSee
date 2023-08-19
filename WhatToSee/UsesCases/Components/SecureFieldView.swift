@@ -23,12 +23,11 @@ struct SecureFieldView: View {
         SecureField(text: $text , prompt: prompt) {
             
         }
+        .frame(width: 300, height: 40)
         .keyboardType(keyboardType)
-        .padding(padding)
         .font(font)
         .background(Color.gray.opacity(opacity ?? 0))
-        .cornerRadius(cornerRadius ?? 0)
-        .padding(.horizontal, paddingHorizontal)
+        .cornerRadius(cornerRadius ?? 0)        
     }
 }
 

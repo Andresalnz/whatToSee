@@ -25,101 +25,42 @@ struct LoginView: View {
                     .frame(width: 100)
                     .padding(.bottom, 15)
                 
-                TextField(text: $viewModel.email, prompt: Text("Correo")) {
-                }
-                .keyboardType(.emailAddress)
-                .autocapitalization(.none)
-                .padding(8)
-                .font(.headline)
-                .background(Color.gray.opacity(0.3))
-                .cornerRadius(8)
-                .padding(.horizontal, 60)
+                TextFieldView(text: $viewModel.email, prompt: Text("Correo"), keyboardType: .emailAddress, opacity: 0.3, cornerRadius: 8)
+                    .padding(9)
+                    .textFieldStyle(.roundedBorder)
                 
-                
-                SecureField(text: $viewModel.password , prompt: Text("Contraseña")) {
+                SecureFieldView(text: $viewModel.password, prompt: Text("Contraseña"), keyboardType: .default, padding: 8, paddingHorizontal: 60, opacity: 0.3, cornerRadius: 8, font: .headline)
+                    .textFieldStyle(.roundedBorder)
                     
-                }
-                .keyboardType(.emailAddress)
-                .autocapitalization(.none)
-                .padding(8)
-                .font(.headline)
-                .background(Color.gray.opacity(0.3))
-                .cornerRadius(8)
-                .padding(.horizontal, 60)
                 
                 HStack(alignment: .center) {
-                        Button("Iniciar Sesión") {
+                    ButtonView(title: "Iniciar Sesión", font: .title2, foregroundColor: .white, backgroundColor: .green, cornerRadius: 8, width: 150, height: 50, action: {
                             viewModel.loginAction()
-                        }
-                        .padding(8)
-                        .font(.title2)
-                        .foregroundColor(.white)
-                        .background(.green)
-                        .cornerRadius(8)
-                        .padding(.top,15)
-                        .padding(.bottom,15)
-                        .background(NavigationLink("", isActive: $viewModel.logged, destination: {
-                            HomeView()
-                        }))
-                    
-                    
-                    Button {
-                        //
-                    } label: {
-                        Text("Cancelar")
-                    }
-                    .padding(8)
-                    .font(.title2)
-                    .foregroundColor(.white)
-                    .background(.gray)
-                    .cornerRadius(8)
-                    .padding(.top,15)
-                    .padding(.bottom,15)
+                    })
+                    .padding(.top, 15)
+            
+                    .background(NavigationLink("", isActive: $viewModel.logged, destination: { HomeView() }))
+
+                    ButtonView(title:"Cancelar", font: .title2, foregroundColor: .white, backgroundColor: .gray, cornerRadius: 8, width: 150, height: 50, action: {
+                        viewModel.cancelAction()
+                    })
+                    .padding(.top, 15)
                 }
                 
+            
+                            
                 HStack(alignment: .center) {
-                    VStack {
-                        Divider()
-                            .frame(height: 1)
-                            .background(.gray)
-                    }
-                    .padding(20)
-                    Text("or")
-                        .font(.callout)
-                        .foregroundColor(.black)
-                    
-                    
-                    
-                    VStack {
-                        Divider()
-                            .frame(height: 1)
-                            .background(.gray)
-                        
-                    }
-                    .padding(20)
+                    SeparatorWithOrView(height: 1, backgroundColor: .gray, padding: 20, text: Text("or"))
                 }
                 
-                Button {
-                    //
-                } label: {
-                    Text("Iniciar sesion con Facebook")
+                ButtonView(title: "Iniciar sesion con Facebook", font: .title2, foregroundColor: .white, backgroundColor: .blue, cornerRadius: 10, width: 300, height: 50) {
+                    print("FACEBOOK")
                 }
-                .frame(width: 300, height: 50)
-                .font(.title2)
-                .foregroundColor(.white)
-                .background(.blue)
-                .cornerRadius(10)
                 
-                Button {
-                    //
-                } label: {
-                    Text("Iniciar sesion con Apple")
+                
+                ButtonView(title: "Iniciar sesion con Apple", font: .title2, foregroundColor: .white, backgroundColor: .black, cornerRadius: 10, width: 300, height: 50) {
+                    print("APPLE")
                 }
-                .frame(width: 300, height: 50)
-                .font(.title2)
-                .foregroundColor(.white)
-                .background(.black)
-                .cornerRadius(10)
                 
                 NavigationLink("¿No tiene cuenta? Create una", destination: CreateAccountView(viewModel: viewModelCreateAccount))
                     .padding(8)
