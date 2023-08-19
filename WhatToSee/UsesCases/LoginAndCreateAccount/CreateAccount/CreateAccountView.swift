@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct CreateAccountView: View {
-    @State var username = ""
-    @State var email = ""
-    @State var password = ""
+    @Environment(\.presentationMode) var presentationMode
+    @ObservedObject var viewModel: CreateAccountViewModel 
     
     var body: some View {
         VStack(alignment: .center) {
@@ -18,7 +17,7 @@ struct CreateAccountView: View {
                 .font(.title)
                 .bold()
                 .padding()
-            TextField(text: $email, prompt: Text("Nombre de usuario")) {
+            TextField(text: $viewModel.username, prompt: Text("Nombre de usuario")) {
             }
             .keyboardType(.emailAddress)
             .autocapitalization(.none)
@@ -29,7 +28,7 @@ struct CreateAccountView: View {
             .padding(.horizontal, 60)
             
             
-            TextField(text: $email, prompt: Text("Nombre de usuario")) {
+            TextField(text: $viewModel.email, prompt: Text("Correo electronico")) {
             }
             .keyboardType(.emailAddress)
             .autocapitalization(.none)
@@ -39,7 +38,7 @@ struct CreateAccountView: View {
             .cornerRadius(8)
             .padding(.horizontal, 60)
             .padding(.top, 8)
-            SecureField(text: $password, prompt: Text("Contraseña")) {
+            SecureField(text: $viewModel.password, prompt: Text("Contraseña")) {
                 
             }
             .keyboardType(.emailAddress)
@@ -52,9 +51,12 @@ struct CreateAccountView: View {
             .padding(.top, 8)
             HStack(alignment: .center) {
                 Button {
-                    //
+                    viewModel.createAccountAction()
                 } label: {
                     Text("Crear Cuenta")
+                }
+                .alert(isPresented: $viewModel.registered) {
+                   Alert(title: Text("OK"), message: Text("El registro se ha realizado con exito"))
                 }
                 .padding(8)
                 .font(.title2)
@@ -85,6 +87,6 @@ struct CreateAccountView: View {
 
 struct CreateAccountView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateAccountView()
+        CreateAccountView(viewModel: CreateAccountViewModel())
     }
 }
