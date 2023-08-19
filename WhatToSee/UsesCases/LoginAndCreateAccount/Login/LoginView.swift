@@ -10,9 +10,8 @@ import SwiftUI
 struct LoginView: View {
     //Detecta configuracion de modo oscuro o claro del iPhone
     @Environment(\.colorScheme) var colorScheme
-    
-    @State var email = ""
-    @State var password = ""
+    let viewModelCreateAccount = CreateAccountViewModel()
+    @ObservedObject var viewModel: LoginViewModel
     
     var body: some View {
         NavigationView {
@@ -26,7 +25,7 @@ struct LoginView: View {
                     .frame(width: 100)
                     .padding(.bottom, 15)
                 
-                TextField(text: $email, prompt: Text("Correo")) {
+                TextField(text: $viewModel.email, prompt: Text("Correo")) {
                 }
                 .keyboardType(.emailAddress)
                 .autocapitalization(.none)
@@ -37,7 +36,7 @@ struct LoginView: View {
                 .padding(.horizontal, 60)
                 
                 
-                SecureField(text: $password, prompt: Text("Contraseña")) {
+                SecureField(text: $viewModel.password , prompt: Text("Contraseña")) {
                     
                 }
                 .keyboardType(.emailAddress)
@@ -49,18 +48,20 @@ struct LoginView: View {
                 .padding(.horizontal, 60)
                 
                 HStack(alignment: .center) {
-                    Button {
-                        //
-                    } label: {
-                        Text("Iniciar sesion")
-                    }
-                    .padding(8)
-                    .font(.title2)
-                    .foregroundColor(.white)
-                    .background(.green)
-                    .cornerRadius(8)
-                    .padding(.top,15)
-                    .padding(.bottom,15)
+                        Button("Iniciar Sesión") {
+                            viewModel.loginAction()
+                        }
+                        .padding(8)
+                        .font(.title2)
+                        .foregroundColor(.white)
+                        .background(.green)
+                        .cornerRadius(8)
+                        .padding(.top,15)
+                        .padding(.bottom,15)
+                        .background(NavigationLink("", isActive: $viewModel.logged, destination: {
+                            HomeView()
+                        }))
+                    
                     
                     Button {
                         //
@@ -120,7 +121,7 @@ struct LoginView: View {
                 .background(.black)
                 .cornerRadius(10)
                 
-                NavigationLink("¿No tiene cuenta? Create una", destination: CreateAccountView())
+                NavigationLink("¿No tiene cuenta? Create una", destination: CreateAccountView(viewModel: viewModelCreateAccount))
             }
             .padding(.bottom, 100)
         }
@@ -129,6 +130,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(viewModel: LoginViewModel())
     }
 }
