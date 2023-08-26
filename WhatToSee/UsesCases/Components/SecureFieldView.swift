@@ -12,27 +12,22 @@ struct SecureFieldView: View {
     @Binding var text: String
     var prompt: Text?
     var keyboardType: UIKeyboardType
-    var padding: CGFloat
-    var paddingHorizontal: CGFloat
-    var opacity: Double?
-    var cornerRadius: CGFloat?
     var font: Font?
-    
+    var widthFrame: Double
+    var heightFrame: Double
     
     var body: some View {
         SecureField(text: $text , prompt: prompt) {
             
         }
-        .frame(width: 300, height: 40)
+        .frame(width: widthFrame, height: heightFrame)
         .keyboardType(keyboardType)
         .font(font)
-        .background(Color.gray.opacity(opacity ?? 0))
-        .cornerRadius(cornerRadius ?? 0)        
     }
 }
 
 struct SecureFieldView_Previews: PreviewProvider {
     static var previews: some View {
-        SecureFieldView(text: .constant(""), keyboardType: .default, padding: 8, paddingHorizontal: 60)
+        SecureFieldView(text: .constant(""), prompt: Text("contraseña"), keyboardType: .default, font: .headline, widthFrame: 300, heightFrame: 8)
     }
 }

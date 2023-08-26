@@ -12,22 +12,23 @@ struct TextFieldView: View {
     @Binding var text: String
     var prompt: Text?
     var keyboardType: UIKeyboardType
-    var opacity: Double?
-    var cornerRadius: CGFloat?
+    
+    var font: Font?
+    var widthFrame: Double
+    var heightFrame: Double
+    
     
     var body: some View {
         TextField("", text: $text, prompt: prompt)
-            .frame(width: 300, height: 40)
+            .frame(width: widthFrame, height: heightFrame)
             .keyboardType(keyboardType)
             .autocapitalization(.none)
-            .font(.headline)
-            .background(Color.gray.opacity(opacity ?? 0))
-            .cornerRadius(cornerRadius ?? 0)
+            .font(font)
     }
 }
 
 struct TextFieldView_Previews: PreviewProvider {
     static var previews: some View {
-        TextFieldView(text: .constant(""), prompt: Text("text"), keyboardType: .emailAddress, opacity: 0.3, cornerRadius: 8)
+        TextFieldView(text: .constant(""), prompt: Text("text"), keyboardType: .emailAddress, font: .headline, widthFrame: 300, heightFrame: 300)
     }
 }
