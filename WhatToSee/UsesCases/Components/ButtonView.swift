@@ -10,9 +10,6 @@ import SwiftUI
 struct ButtonView: View {
     
     var title: String
-//    var padding: CGFloat?
-//    var paddingTop: CGFloat
-//    var paddingBottom: CGFloat
     var font: Font
     var foregroundColor: Color
     var backgroundColor: Color
@@ -28,15 +25,10 @@ struct ButtonView: View {
            action()
         }
         .frame(width: width,height: height)
-//        .padding(padding ?? 0)
         .font(font)
         .foregroundColor(foregroundColor)
         .background(backgroundColor)
         .cornerRadius(cornerRadius)
-//        .padding(.top, paddingTop)
-//        .padding(.bottom, paddingBottom)
-        
-        
     }
 }
 
