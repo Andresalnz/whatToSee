@@ -17,67 +17,27 @@ struct CreateAccountView: View {
                 .font(.title)
                 .bold()
                 .padding()
-            TextField(text: $viewModel.username, prompt: Text("Nombre de usuario")) {
-            }
-            .keyboardType(.emailAddress)
-            .autocapitalization(.none)
-            .padding(8)
-            .font(.headline)
-            .background(Color.gray.opacity(0.3))
-            .cornerRadius(8)
-            .padding(.horizontal, 60)
             
-            
-            TextField(text: $viewModel.email, prompt: Text("Correo electronico")) {
-            }
-            .keyboardType(.emailAddress)
-            .autocapitalization(.none)
-            .padding(8)
-            .font(.headline)
-            .background(Color.gray.opacity(0.3))
-            .cornerRadius(8)
-            .padding(.horizontal, 60)
-            .padding(.top, 8)
-            SecureField(text: $viewModel.password, prompt: Text("Contraseña")) {
+            TextFieldView(text: $viewModel.username, prompt: Text("Nombre"), keyboardType: .default, font: .headline, widthFrame: 300, heightFrame: 40)
+                .textFieldStyle(.roundedBorder)
                 
-            }
-            .keyboardType(.emailAddress)
-            .autocapitalization(.none)
-            .padding(8)
-            .font(.headline)
-            .background(Color.gray.opacity(0.3))
-            .cornerRadius(8)
-            .padding(.horizontal, 60)
-            .padding(.top, 8)
+            TextFieldView(text: $viewModel.email, prompt: Text("Correo"), keyboardType: .emailAddress, font: .headline, widthFrame: 300, heightFrame: 40)
+                .textFieldStyle(.roundedBorder)
+            
+            SecureFieldView(text: $viewModel.password, prompt: Text("Contraseña"), keyboardType: .default, font: .headline, widthFrame: 300, heightFrame: 40)
+                .textFieldStyle(.roundedBorder)
+
             HStack(alignment: .center) {
-                Button {
-                    viewModel.createAccountAction()
-                } label: {
-                    Text("Crear Cuenta")
-                }
-                .alert(isPresented: $viewModel.registered) {
-                   Alert(title: Text("OK"), message: Text("El registro se ha realizado con exito"))
-                }
-                .padding(8)
-                .font(.title2)
-                .foregroundColor(.white)
-                .background(.green)
-                .cornerRadius(8)
-                .padding(.top,15)
-                .padding(.bottom,15)
                 
-                Button {
-                    //
-                } label: {
-                    Text("Cancelar")
+                ButtonView(title: "Crear Cuenta", font: .title2, foregroundColor: .white, backgroundColor: .green, width: 150, height: 50) {
+                    viewModel.createAccountAction()
                 }
-                .padding(8)
-                .font(.title2)
-                .foregroundColor(.white)
-                .background(.gray)
                 .cornerRadius(8)
-                .padding(.top,15)
-                .padding(.bottom,15)
+
+                ButtonView(title: "Cancelar", font: .title2, foregroundColor: .white, backgroundColor: .gray, width: 150, height: 50) {
+                    //
+                }
+                .cornerRadius(8)
             }
             
         }
