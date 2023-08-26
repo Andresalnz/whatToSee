@@ -25,26 +25,24 @@ struct LoginView: View {
                     .frame(width: 100)
                     .padding(.bottom, 15)
                 
-                TextFieldView(text: $viewModel.email, prompt: Text("Correo"), keyboardType: .emailAddress, opacity: 0.3, cornerRadius: 8)
-                    .padding(9)
+                TextFieldView(text: $viewModel.email, prompt: Text("Correo"), keyboardType: .emailAddress, font: .headline, widthFrame: 300, heightFrame: 40)
                     .textFieldStyle(.roundedBorder)
                 
-                SecureFieldView(text: $viewModel.password, prompt: Text("Contraseña"), keyboardType: .default, padding: 8, paddingHorizontal: 60, opacity: 0.3, cornerRadius: 8, font: .headline)
+                SecureFieldView(text: $viewModel.password, prompt: Text("Contraseña"), keyboardType: .default, font: .headline, widthFrame: 300, heightFrame: 40)
                     .textFieldStyle(.roundedBorder)
                     
                 
                 HStack(alignment: .center) {
-                    ButtonView(title: "Iniciar Sesión", font: .title2, foregroundColor: .white, backgroundColor: .green, cornerRadius: 8, width: 150, height: 50, action: {
+                    ButtonView(title: "Iniciar Sesión", font: .title2, foregroundColor: .white, backgroundColor: .green,  width: 150, height: 50, action: {
                             viewModel.loginAction()
                     })
-                    .padding(.top, 15)
-            
+                    .cornerRadius(8)
                     .background(NavigationLink("", isActive: $viewModel.logged, destination: { HomeView() }))
 
-                    ButtonView(title:"Cancelar", font: .title2, foregroundColor: .white, backgroundColor: .gray, cornerRadius: 8, width: 150, height: 50, action: {
+                    ButtonView(title:"Cancelar", font: .title2, foregroundColor: .white, backgroundColor: .gray, width: 150, height: 50, action: {
                         viewModel.cancelAction()
                     })
-                    .padding(.top, 15)
+                    .cornerRadius(8)
                 }
                 
             
@@ -53,14 +51,15 @@ struct LoginView: View {
                     SeparatorWithOrView(height: 1, backgroundColor: .gray, padding: 20, text: Text("or"))
                 }
                 
-                ButtonView(title: "Iniciar sesion con Facebook", font: .title2, foregroundColor: .white, backgroundColor: .blue, cornerRadius: 10, width: 300, height: 50) {
+                ButtonView(title: "Iniciar sesion con Facebook", font: .title2, foregroundColor: .white, backgroundColor: .blue, width: 300, height: 50) {
                     print("FACEBOOK")
                 }
+                .cornerRadius(8)
                 
-                
-                ButtonView(title: "Iniciar sesion con Apple", font: .title2, foregroundColor: .white, backgroundColor: .black, cornerRadius: 10, width: 300, height: 50) {
+                ButtonView(title: "Iniciar sesion con Apple", font: .title2, foregroundColor: .white, backgroundColor: .black, width: 300, height: 50) {
                     print("APPLE")
                 }
+                .cornerRadius(8)
                 
                 NavigationLink("¿No tiene cuenta? Create una", destination: CreateAccountView(viewModel: viewModelCreateAccount))
                     .padding(8)
