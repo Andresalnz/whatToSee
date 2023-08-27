@@ -36,8 +36,17 @@ struct LoginView: View {
                     ButtonView(title: "Iniciar Sesión", font: .title2, foregroundColor: .white, backgroundColor: .green,  width: 150, height: 50, action: {
                             viewModel.loginAction()
                     })
+                    
                     .cornerRadius(8)
+                    .alert("", isPresented: $viewModel.alertError, actions: {
+                        Button("¡De acuerdo!") {
+                            viewModel.cancelAction()
+                        }
+                    }, message: {
+                        Text(viewModel.error.uppercased())
+                    })
                     .background(NavigationLink("", isActive: $viewModel.logged, destination: { HomeView() }))
+                    
 
                     ButtonView(title:"Cancelar", font: .title2, foregroundColor: .white, backgroundColor: .gray, width: 150, height: 50, action: {
                         viewModel.cancelAction()
