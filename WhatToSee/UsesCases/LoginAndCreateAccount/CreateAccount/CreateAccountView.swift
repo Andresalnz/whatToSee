@@ -32,10 +32,17 @@ struct CreateAccountView: View {
                 ButtonView(title: "Crear Cuenta", font: .title2, foregroundColor: .white, backgroundColor: .green, width: 150, height: 50) {
                     viewModel.createAccountAction()
                 }
+                .alert("", isPresented: $viewModel.alert, actions: {
+                    Button("¡De acuerdo!") {
+                       //
+                    }
+                }, message: {
+                    Text(viewModel.errorAlert.uppercased())
+                })
                 .cornerRadius(8)
 
                 ButtonView(title: "Cancelar", font: .title2, foregroundColor: .white, backgroundColor: .gray, width: 150, height: 50) {
-                    //
+                    viewModel.cancelAction()
                 }
                 .cornerRadius(8)
             }
