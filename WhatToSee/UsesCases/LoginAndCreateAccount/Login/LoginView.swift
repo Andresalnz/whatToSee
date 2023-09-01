@@ -60,16 +60,6 @@ struct LoginView: View {
                     SeparatorWithOrView(height: 1, backgroundColor: .gray, padding: 20, text: Text("or"))
                 }
                 
-                ButtonView(title: "Iniciar sesion con Facebook", font: .title2, foregroundColor: .white, backgroundColor: .blue, width: 300, height: 50) {
-                    print("FACEBOOK")
-                }
-                .cornerRadius(8)
-                
-                ButtonView(title: "Iniciar sesion con Apple", font: .title2, foregroundColor: .white, backgroundColor: .black, width: 300, height: 50) {
-                    print("APPLE")
-                }
-                .cornerRadius(8)
-                
                 NavigationLink("¿No tiene cuenta? Create una", destination: CreateAccountView(viewModel: viewModelCreateAccount))
                     .padding(8)
             }
