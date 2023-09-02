@@ -25,7 +25,7 @@ struct PopularMoviesDTO: Codable {
 struct ResultsPopularMoviesDTO: Codable {
     let adult: Bool?
     let backdropPath: String?
-    let genreIds: [Int]?
+    let genreIds: [ListGenresMoviesModelDTO]?
     let id: Int?
     let originalLanguage: String?
     let originalTitle: String?
