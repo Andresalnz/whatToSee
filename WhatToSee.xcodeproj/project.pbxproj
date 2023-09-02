@@ -15,6 +15,7 @@
 		9F0F2AF52A90C9120051534A /* SecureFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F2AF42A90C9120051534A /* SecureFieldView.swift */; };
 		9F0F2AF72A90CBE60051534A /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F2AF62A90CBE60051534A /* ButtonView.swift */; };
 		9F0F2AF92A90DBB60051534A /* SeparatorWithOrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F2AF82A90DBB60051534A /* SeparatorWithOrView.swift */; };
+		9F629B1F2AA3581A00FF6472 /* PopularMoviesModelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F629B1E2AA3581A00FF6472 /* PopularMoviesModelDTO.swift */; };
 		9FDCC08C2A8E312000344E96 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDCC08B2A8E312000344E96 /* LoginView.swift */; };
 		9FDCC08E2A8E313600344E96 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDCC08D2A8E313600344E96 /* CreateAccountView.swift */; };
 		9FDDD18A2A8CE5440037F36D /* WhatToSeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDDD1892A8CE5440037F36D /* WhatToSeeApp.swift */; };
@@ -44,6 +45,7 @@
 		9F0F2AF42A90C9120051534A /* SecureFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureFieldView.swift; sourceTree = "<group>"; };
 		9F0F2AF62A90CBE60051534A /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		9F0F2AF82A90DBB60051534A /* SeparatorWithOrView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorWithOrView.swift; sourceTree = "<group>"; };
+		9F629B1E2AA3581A00FF6472 /* PopularMoviesModelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesModelDTO.swift; sourceTree = "<group>"; };
 		9FDCC08B2A8E312000344E96 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		9FDCC08D2A8E313600344E96 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		9FDDD1862A8CE5440037F36D /* WhatToSee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatToSee.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +96,14 @@
 				9F0F2AF82A90DBB60051534A /* SeparatorWithOrView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		9F629B202AA35B8A00FF6472 /* PopularMovies */ = {
+			isa = PBXGroup;
+			children = (
+				9F629B1E2AA3581A00FF6472 /* PopularMoviesModelDTO.swift */,
+			);
+			path = PopularMovies;
 			sourceTree = "<group>";
 		};
 		9FDCC0892A8E310900344E96 /* Login */ = {
@@ -165,6 +175,7 @@
 		9FDDD1B32A8D32550037F36D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9F629B202AA35B8A00FF6472 /* PopularMovies */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -272,6 +283,7 @@
 				9F0F2AEE2A8F89E40051534A /* HomeViewModel.swift in Sources */,
 				9F0F2AF92A90DBB60051534A /* SeparatorWithOrView.swift in Sources */,
 				9FDDD18A2A8CE5440037F36D /* WhatToSeeApp.swift in Sources */,
+				9F629B1F2AA3581A00FF6472 /* PopularMoviesModelDTO.swift in Sources */,
 				9F0F2AF72A90CBE60051534A /* ButtonView.swift in Sources */,
 				9FDCC08E2A8E313600344E96 /* CreateAccountView.swift in Sources */,
 				9F0F2AE92A8F85A60051534A /* CreateAccountViewModel.swift in Sources */,
