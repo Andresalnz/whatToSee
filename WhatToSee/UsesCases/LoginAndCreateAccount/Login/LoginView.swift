@@ -12,6 +12,7 @@ struct LoginView: View {
     @Environment(\.colorScheme) var colorScheme
     let viewModelCreateAccount = CreateAccountViewModel()
     @ObservedObject var viewModel: LoginViewModel
+    @ObservedObject var viewModelHome: HomeViewModel
     
     var body: some View {
         NavigationView {
@@ -45,7 +46,7 @@ struct LoginView: View {
                     }, message: {
                         Text(viewModel.error.uppercased())
                     })
-                    .background(NavigationLink("", isActive: $viewModel.logged, destination: { HomeView() }))
+                    .background(NavigationLink("", isActive: $viewModel.logged, destination: { HomeView(viewModel:viewModelHome) }))
                     
 
                     ButtonView(title:"Cancelar", font: .title2, foregroundColor: .white, backgroundColor: .gray, width: 150, height: 50, action: {
@@ -70,6 +71,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(viewModel: LoginViewModel())
+        LoginView(viewModel: LoginViewModel(), viewModelHome: HomeViewModel())
     }
 }
