@@ -13,13 +13,13 @@ struct HomeView: View {
     
     var body: some View {
         VStack(){
-            ForEach(viewModel.movies, id: \.id) { movie in
+            ForEach(viewModel.popularMovies, id: \.id) { movie in
                 Text(movie.title ?? "no title")
             }
             
         }
         .onAppear {
-            viewModel.loadData()
+            viewModel.loadUI()
         }
     }
 }

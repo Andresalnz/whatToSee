@@ -19,6 +19,7 @@
 		9F629B222AA3601400FF6472 /* PopularMoviesBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F629B212AA3601400FF6472 /* PopularMoviesBO.swift */; };
 		9F629B252AA3619900FF6472 /* GenresMoviesModelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F629B242AA3619900FF6472 /* GenresMoviesModelDTO.swift */; };
 		9F629B272AA3630900FF6472 /* PopularMoviesMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F629B262AA3630900FF6472 /* PopularMoviesMapper.swift */; };
+		9F629B312AA6401200FF6472 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F629B302AA6401200FF6472 /* HomeRepository.swift */; };
 		9FDCC08C2A8E312000344E96 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDCC08B2A8E312000344E96 /* LoginView.swift */; };
 		9FDCC08E2A8E313600344E96 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDCC08D2A8E313600344E96 /* CreateAccountView.swift */; };
 		9FDDD18A2A8CE5440037F36D /* WhatToSeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDDD1892A8CE5440037F36D /* WhatToSeeApp.swift */; };
@@ -52,6 +53,7 @@
 		9F629B212AA3601400FF6472 /* PopularMoviesBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesBO.swift; sourceTree = "<group>"; };
 		9F629B242AA3619900FF6472 /* GenresMoviesModelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresMoviesModelDTO.swift; sourceTree = "<group>"; };
 		9F629B262AA3630900FF6472 /* PopularMoviesMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesMapper.swift; sourceTree = "<group>"; };
+		9F629B302AA6401200FF6472 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		9FDCC08B2A8E312000344E96 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		9FDCC08D2A8E313600344E96 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
 		9FDDD1862A8CE5440037F36D /* WhatToSee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatToSee.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +148,30 @@
 			path = DTO;
 			sourceTree = "<group>";
 		};
+		9F629B2B2AA638E400FF6472 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				9F629B2C2AA638F000FF6472 /* Services */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		9F629B2C2AA638F000FF6472 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9F629B2D2AA638F800FF6472 /* TMDBRepository */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9F629B2D2AA638F800FF6472 /* TMDBRepository */ = {
+			isa = PBXGroup;
+			children = (
+				9F629B302AA6401200FF6472 /* HomeRepository.swift */,
+			);
+			path = TMDBRepository;
+			sourceTree = "<group>";
+		};
 		9FDCC0892A8E310900344E96 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +211,7 @@
 			children = (
 				9FDDD1B32A8D32550037F36D /* Model */,
 				9FDDD1B22A8D32480037F36D /* UsesCases */,
+				9F629B2B2AA638E400FF6472 /* Provider */,
 				9FDDD1892A8CE5440037F36D /* WhatToSeeApp.swift */,
 				9FDDD18B2A8CE5440037F36D /* ContentView.swift */,
 				9FDDD18D2A8CE5450037F36D /* Assets.xcassets */,
@@ -325,6 +352,7 @@
 				9F0F2AEE2A8F89E40051534A /* HomeViewModel.swift in Sources */,
 				9F0F2AF92A90DBB60051534A /* SeparatorWithOrView.swift in Sources */,
 				9FDDD18A2A8CE5440037F36D /* WhatToSeeApp.swift in Sources */,
+				9F629B312AA6401200FF6472 /* HomeRepository.swift in Sources */,
 				9F629B222AA3601400FF6472 /* PopularMoviesBO.swift in Sources */,
 				9F629B1F2AA3581A00FF6472 /* PopularMoviesModelDTO.swift in Sources */,
 				9F0F2AF72A90CBE60051534A /* ButtonView.swift in Sources */,
