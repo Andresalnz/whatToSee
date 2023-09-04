@@ -9,13 +9,13 @@ import Foundation
 
 struct PopularMoviesDTO: Codable {
     let page: Int?
-    let result: [ResultsPopularMoviesDTO]
+    let results: [ResultsPopularMoviesDTO]?
     let totalPages: Int?
     let totalResults: Int?
     
     enum CodingKeys:  String, CodingKey {
         case page
-        case result
+        case results
         case totalPages = "total_pages"
         case totalResults = "total_results"
     }
@@ -25,9 +25,9 @@ struct PopularMoviesDTO: Codable {
 struct ResultsPopularMoviesDTO: Codable {
     let adult: Bool?
     let backdropPath: String?
-    let genreIds: [ListGenresMoviesModelDTO]?
+    let genreIds: [Int]?
     let id: Int?
-    let originalLanguage: String?
+    let originalLanguaje: String?
     let originalTitle: String?
     let overview: String?
     let popularity: Double?
@@ -35,15 +35,15 @@ struct ResultsPopularMoviesDTO: Codable {
     let releaseDate: String?
     let title: String?
     let video: Bool?
-    let voteAverage: Int?
-    let voteCount: Int?
+    let voteAverage: Double?
+    let voteCount: Double?
     
     enum CodingKeys:  String, CodingKey {
         case adult
         case backdropPath = "backdrop_path"
         case genreIds = "genre_ids"
         case id
-        case originalLanguage = "original_language"
+        case originalLanguaje = "original_language"
         case originalTitle = "original_title"
         case overview
         case popularity

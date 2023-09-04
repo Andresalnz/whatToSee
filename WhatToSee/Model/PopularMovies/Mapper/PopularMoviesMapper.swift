@@ -13,7 +13,7 @@ extension ResultsPopularMoviesDTO {
                                       backdropPath: URL(string: backdropPath ?? ""),
                                       genreIds: genreIds,
                                       id: id,
-                                      originalLanguage: originalLanguage,
+                                      originalLanguaje: originalLanguaje,
                                       originalTitle: originalTitle,
                                       overview: overview,
                                       popularity: popularity,
