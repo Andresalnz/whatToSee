@@ -22,6 +22,18 @@ class HomeRepository {
             return []
         }
     }
+    
+    func getGenresMovies() async throws -> [ListGenresMoviesModelDTO] {
+        let urlString = "https://api.themoviedb.org/3/genre/movie/list?api_key=d24265d9cbfd2e4119f0539b474f7c64"
+        guard let url = URL(string: urlString) else { return [] }
+        let (data, _) = try await URLSession.shared.data(from: url)
+        let genresMoviesModel = try JSONDecoder().decode(GenreMoviesModelDTO.self, from: data)
+        if let genresMovies = genresMoviesModel.genres {
+            return genresMovies
+        } else {
+            return []
+        }
+    }
 }
 
 
