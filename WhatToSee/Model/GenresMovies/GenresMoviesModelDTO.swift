@@ -8,7 +8,7 @@
 import Foundation
 
 struct GenreMoviesModelDTO: Codable {
-    let genres: [ListGenresMoviesModelDTO]
+    let genres: [ListGenresMoviesModelDTO]?
 }
 
 struct ListGenresMoviesModelDTO: Codable {
