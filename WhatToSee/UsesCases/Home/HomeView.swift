@@ -10,11 +10,35 @@ import SwiftUI
 struct HomeView: View {
     
     @StateObject var viewModel: HomeViewModel
-    
+    let buildImage: URL? = URL(string: "https://image.tmdb.org/t/p/w500")
     var body: some View {
+        
         VStack(){
-            ForEach(viewModel.popularMovies, id: \.id) { movie in
-                Text(movie.title ?? "no title")
+            Text("Popular")
+            ScrollView() {
+               
+                ForEach(viewModel.orderMovies.sorted(by: { $0.key < $1.key }), id: \.key) { elemento in
+                    Text("\(elemento.key)")
+                        .font(.title)
+                    ScrollView(.horizontal) {
+                        HStack() {
+                            ForEach(elemento.value, id: \.id) { elemento2 in
+                                
+                                VStack {
+                                    AsyncImage(url: URL(string: "\(buildImage!)\(elemento2.posterPath!)")) { image in
+                                        image.resizable()
+                                            .frame(width: 300, height: 400)
+                                    } placeholder: {
+                                        ProgressView()
+                                    }
+                                    Text(elemento2.originalTitle!)
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+                
             }
             
         }

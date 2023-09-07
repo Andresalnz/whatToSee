@@ -11,7 +11,7 @@ import Foundation
     
      @Published var popularMovies: [ResultsPopularMoviesBO] = []
      @Published var genresMovies: [ListGenresMoviesModelDTO] = []
-     @Published var orderMovies: [Int: [ResultsPopularMoviesBO]] = [:]
+     @Published var orderMovies: [String: [ResultsPopularMoviesBO]] = [:]
      
      var hola: [ResultsPopularMoviesBO] = []
      
@@ -19,16 +19,19 @@ import Foundation
      let repository: HomeRepository = HomeRepository()
      
      func order()  {
-         var id: Int = 0
+         var id: String = ""
          for (_,j) in genresMovies.enumerated() {
              for k in popularMovies {
                  if k.genreIds?.contains(j.id!) == true {
-                     id = j.id!
+                     id = j.name!
                      hola.append(k)
                  }
              }
-             orderMovies[id] = hola
-             hola.removeAll()
+             if !hola.isEmpty {
+                 orderMovies[id] = hola
+                 hola.removeAll()
+             }
+            
          }
          print(orderMovies)
      }
