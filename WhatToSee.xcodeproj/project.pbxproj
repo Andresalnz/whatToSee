@@ -38,6 +38,9 @@
 		9FDDD1AD2A8CEFA70037F36D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9FDDD1AC2A8CEFA70037F36D /* FirebaseStorage */; };
 		9FDDD1AF2A8CEFA70037F36D /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 9FDDD1AE2A8CEFA70037F36D /* FirebaseStorageCombine-Community */; };
 		9FDDD1B12A8CF3250037F36D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9FDDD1B02A8CF3250037F36D /* GoogleService-Info.plist */; };
+		9FF0E5622AAB0DFD0043881E /* TopRatedMoviesModelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0E5612AAB0DFD0043881E /* TopRatedMoviesModelDTO.swift */; };
+		9FF0E5642AAB0E460043881E /* TopRatedMoviesModelBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0E5632AAB0E460043881E /* TopRatedMoviesModelBO.swift */; };
+		9FF0E5662AAB0E820043881E /* TopRatedMoviesMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0E5652AAB0E820043881E /* TopRatedMoviesMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +65,9 @@
 		9FDDD18D2A8CE5450037F36D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FDDD1902A8CE5450037F36D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9FDDD1B02A8CF3250037F36D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9FF0E5612AAB0DFD0043881E /* TopRatedMoviesModelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMoviesModelDTO.swift; sourceTree = "<group>"; };
+		9FF0E5632AAB0E460043881E /* TopRatedMoviesModelBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMoviesModelBO.swift; sourceTree = "<group>"; };
+		9FF0E5652AAB0E820043881E /* TopRatedMoviesMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMoviesMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +248,7 @@
 		9FDDD1B32A8D32550037F36D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9FF0E55D2AAB0D4B0043881E /* TopRatedMovies */,
 				9F629B232AA3614500FF6472 /* GenresMovies */,
 				9F629B202AA35B8A00FF6472 /* PopularMovies */,
 			);
@@ -255,6 +262,40 @@
 				9FDCC0892A8E310900344E96 /* Login */,
 			);
 			path = LoginAndCreateAccount;
+			sourceTree = "<group>";
+		};
+		9FF0E55D2AAB0D4B0043881E /* TopRatedMovies */ = {
+			isa = PBXGroup;
+			children = (
+				9FF0E5602AAB0D710043881E /* DTO */,
+				9FF0E55F2AAB0D6C0043881E /* BO */,
+				9FF0E55E2AAB0D650043881E /* Mapper */,
+			);
+			path = TopRatedMovies;
+			sourceTree = "<group>";
+		};
+		9FF0E55E2AAB0D650043881E /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				9FF0E5652AAB0E820043881E /* TopRatedMoviesMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		9FF0E55F2AAB0D6C0043881E /* BO */ = {
+			isa = PBXGroup;
+			children = (
+				9FF0E5632AAB0E460043881E /* TopRatedMoviesModelBO.swift */,
+			);
+			path = BO;
+			sourceTree = "<group>";
+		};
+		9FF0E5602AAB0D710043881E /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				9FF0E5612AAB0DFD0043881E /* TopRatedMoviesModelDTO.swift */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +385,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF0E5662AAB0E820043881E /* TopRatedMoviesMapper.swift in Sources */,
 				9F0F2AF52A90C9120051534A /* SecureFieldView.swift in Sources */,
 				9FDDD18C2A8CE5440037F36D /* ContentView.swift in Sources */,
 				9F0F2AEC2A8F89C70051534A /* HomeView.swift in Sources */,
@@ -352,6 +394,7 @@
 				9F0F2AEE2A8F89E40051534A /* HomeViewModel.swift in Sources */,
 				9F0F2AF92A90DBB60051534A /* SeparatorWithOrView.swift in Sources */,
 				9FDDD18A2A8CE5440037F36D /* WhatToSeeApp.swift in Sources */,
+				9FF0E5642AAB0E460043881E /* TopRatedMoviesModelBO.swift in Sources */,
 				9F629B312AA6401200FF6472 /* HomeRepository.swift in Sources */,
 				9F629B222AA3601400FF6472 /* PopularMoviesBO.swift in Sources */,
 				9F629B1F2AA3581A00FF6472 /* PopularMoviesModelDTO.swift in Sources */,
@@ -359,6 +402,7 @@
 				9FDCC08E2A8E313600344E96 /* CreateAccountView.swift in Sources */,
 				9F0F2AE92A8F85A60051534A /* CreateAccountViewModel.swift in Sources */,
 				9F0F2AE52A8E345F0051534A /* LoginViewModel.swift in Sources */,
+				9FF0E5622AAB0DFD0043881E /* TopRatedMoviesModelDTO.swift in Sources */,
 				9F0F2AF32A90C5120051534A /* TextFieldView.swift in Sources */,
 				9F629B272AA3630900FF6472 /* PopularMoviesMapper.swift in Sources */,
 			);
