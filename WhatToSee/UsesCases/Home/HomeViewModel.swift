@@ -11,6 +11,7 @@ import Foundation
     
      @Published var popularMovies: [ResultsPopularMoviesBO] = []
      @Published var genresMovies: [ListGenresMoviesModelDTO] = []
+     @Published var topRatedMovies: [ResultsTopRatedMoviesBO] = []
      @Published var orderMovies: [String: [ResultsPopularMoviesBO]] = [:]
      
      var hola: [ResultsPopularMoviesBO] = []
@@ -47,6 +48,7 @@ import Foundation
          do {
              popularMovies = try await repository.getPopularMovies()
              genresMovies = try await repository.getGenresMovies()
+             topRatedMovies = try await repository.getTopRatedMovies()
              order()
          } catch (let err) {
              print(err)
