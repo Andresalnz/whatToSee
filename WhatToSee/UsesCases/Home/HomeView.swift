@@ -10,6 +10,8 @@ import SwiftUI
 struct HomeView: View {
     
     @StateObject var viewModel: HomeViewModel
+    
+    @State var clasificationTopRated: Int = 0
     let buildImage: URL? = URL(string: "https://image.tmdb.org/t/p/w500")
     var body: some View {
         
@@ -42,6 +44,28 @@ struct HomeView: View {
                         
                     }
                 }
+  
+                NavigationView {
+                    List(viewModel.topRatedMovies, id: \.id) { i in
+                        HStack {
+                            AsyncImage(url: URL(string: "\(buildImage!)\(i.posterPath!)")) { image in
+                                image.resizable()
+                                    .frame(width: 90, height: 100)
+                            } placeholder: {
+                                ProgressView()
+                            }
+                            Text(i.originalTitle!)
+                        }
+                        .navigationTitle("Pelicula mejor valoradas")
+                        .navigationBarTitleDisplayMode(.inline)
+                        
+                    }
+                    
+                    
+                }
+                .padding(.top,50)
+                .listStyle(.plain)
+                
                 
             }
             
