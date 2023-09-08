@@ -14,12 +14,15 @@ struct HomeView: View {
     var body: some View {
         
         VStack(){
-            Text("Popular")
+            Text("Home")
+                .font(.title)
             ScrollView() {
-               
+                Text("Movies Popular")
+                    .font(.title)
                 ForEach(viewModel.orderMovies.sorted(by: { $0.key < $1.key }), id: \.key) { elemento in
                     Text("\(elemento.key)")
-                        .font(.title)
+                        .font(.title2)
+                        .padding(.top,20)
                     ScrollView(.horizontal) {
                         HStack() {
                             ForEach(elemento.value, id: \.id) { elemento2 in
@@ -32,6 +35,7 @@ struct HomeView: View {
                                         ProgressView()
                                     }
                                     Text(elemento2.originalTitle!)
+                                        .font(.body)
                                 }
                             }
                         }
