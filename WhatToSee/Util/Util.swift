@@ -22,6 +22,9 @@ final class Util {
         case genresMovie
         case topRatedMovie
         
+        //Upcoming
+        case upcoming
+        
         func shapeURLHome() -> URL? {
             switch self {
                 case .PopularMovie:
@@ -30,6 +33,8 @@ final class Util {
                     return URL(string: "\(Constants.TMDBuri)\(Constants.genresMovies)\(Constants.apiKey)")
                 case .topRatedMovie:
                     return URL(string: "\(Constants.TMDBuri)\(Constants.topRatedMovies)\(Constants.apiKey)")
+                case .upcoming:
+                    return URL(string: "\(Constants.TMDBuri)\(Constants.upcoming)\(Constants.apiKey)")
             }
         }
     }
