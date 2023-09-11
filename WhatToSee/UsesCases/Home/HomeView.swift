@@ -11,64 +11,33 @@ struct HomeView: View {
     
     @StateObject var viewModel: HomeViewModel
     
-    @State var clasificationTopRated: Int = 0
-    let buildImage: URL? = URL(string: "https://image.tmdb.org/t/p/w500")
     var body: some View {
-        
-        VStack(){
-            Text("Home")
-                .font(.title)
+        VStack() {
             ScrollView() {
                 Text("Movies Popular")
                     .font(.title)
-                ForEach(viewModel.orderMovies.sorted(by: { $0.key < $1.key }), id: \.key) { elemento in
-                    Text("\(elemento.key)")
+                ForEach(viewModel.orderMovies.sorted(by: { $0.key < $1.key }), id: \.key) { elementDictionaryMovies in
+                    Text("\(elementDictionaryMovies.key)")
                         .font(.title2)
                         .padding(.top,20)
                     ScrollView(.horizontal) {
-                        HStack() {
-                            ForEach(elemento.value, id: \.id) { elemento2 in
-                                
-                                VStack {
-                                    AsyncImage(url: URL(string: "\(buildImage!)\(elemento2.posterPath!)")) { image in
-                                        image.resizable()
-                                            .frame(width: 300, height: 400)
-                                    } placeholder: {
-                                        ProgressView()
-                                    }
-                                    Text(elemento2.originalTitle!)
-                                        .font(.body)
-                                }
+                        HStack {
+                            ForEach(elementDictionaryMovies.value, id: \.id) { movie in
+                                PopularMovieRow(moviePopular: movie)
                             }
                         }
-                        
                     }
                 }
-  
                 NavigationView {
-                    List(viewModel.topRatedMovies, id: \.id) { i in
-                        HStack {
-                            AsyncImage(url: URL(string: "\(buildImage!)\(i.posterPath!)")) { image in
-                                image.resizable()
-                                    .frame(width: 90, height: 100)
-                            } placeholder: {
-                                ProgressView()
-                            }
-                            Text(i.originalTitle!)
-                        }
-                        .navigationTitle("Pelicula mejor valoradas")
-                        .navigationBarTitleDisplayMode(.inline)
-                        
+                    List(viewModel.topRatedMovies, id: \.id) { movie in
+                        TopRatedMovieRow(movieTopRated: movie)
+                            .navigationTitle("Pelicula mejor valoradas")
+                            .navigationBarTitleDisplayMode(.inline)
                     }
-                    
-                    
                 }
                 .padding(.top,50)
                 .listStyle(.plain)
-                
-                
             }
-            
         }
         .onAppear {
             viewModel.loadUI()
