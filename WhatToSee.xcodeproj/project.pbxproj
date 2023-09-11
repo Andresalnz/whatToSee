@@ -11,6 +11,8 @@
 		9F0D22002AAF76CA008E3DCE /* UpcomingModelBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D21FF2AAF76CA008E3DCE /* UpcomingModelBO.swift */; };
 		9F0D22022AAF7716008E3DCE /* UpcomingMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D22012AAF7716008E3DCE /* UpcomingMapper.swift */; };
 		9F0D22042AAF77B1008E3DCE /* UpcomingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D22032AAF77B1008E3DCE /* UpcomingRepository.swift */; };
+		9F0D22072AAF79D6008E3DCE /* CinemaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D22062AAF79D6008E3DCE /* CinemaView.swift */; };
+		9F0D22092AAF79DF008E3DCE /* CinemaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D22082AAF79DF008E3DCE /* CinemaViewModel.swift */; };
 		9F0F2AE52A8E345F0051534A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F2AE42A8E345F0051534A /* LoginViewModel.swift */; };
 		9F0F2AE92A8F85A60051534A /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F2AE82A8F85A60051534A /* CreateAccountViewModel.swift */; };
 		9F0F2AEC2A8F89C70051534A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F2AEB2A8F89C70051534A /* HomeView.swift */; };
@@ -56,6 +58,8 @@
 		9F0D21FF2AAF76CA008E3DCE /* UpcomingModelBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingModelBO.swift; sourceTree = "<group>"; };
 		9F0D22012AAF7716008E3DCE /* UpcomingMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMapper.swift; sourceTree = "<group>"; };
 		9F0D22032AAF77B1008E3DCE /* UpcomingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingRepository.swift; sourceTree = "<group>"; };
+		9F0D22062AAF79D6008E3DCE /* CinemaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaView.swift; sourceTree = "<group>"; };
+		9F0D22082AAF79DF008E3DCE /* CinemaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaViewModel.swift; sourceTree = "<group>"; };
 		9F0F2AE42A8E345F0051534A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		9F0F2AE82A8F85A60051534A /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
 		9F0F2AEB2A8F89C70051534A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -122,6 +126,15 @@
 			isa = PBXGroup;
 			children = (
 				9F0D22032AAF77B1008E3DCE /* UpcomingRepository.swift */,
+			);
+			path = Cinema;
+			sourceTree = "<group>";
+		};
+		9F0D22052AAF79C6008E3DCE /* Cinema */ = {
+			isa = PBXGroup;
+			children = (
+				9F0D22062AAF79D6008E3DCE /* CinemaView.swift */,
+				9F0D22082AAF79DF008E3DCE /* CinemaViewModel.swift */,
 			);
 			path = Cinema;
 			sourceTree = "<group>";
@@ -345,6 +358,7 @@
 		9FDDD1B22A8D32480037F36D /* UsesCases */ = {
 			isa = PBXGroup;
 			children = (
+				9F0D22052AAF79C6008E3DCE /* Cinema */,
 				9F0F2AEA2A8F89BD0051534A /* Home */,
 				9FDDD1B42A8D342B0037F36D /* LoginAndCreateAccount */,
 				9F0F2AEF2A90C17F0051534A /* Components */,
@@ -512,9 +526,11 @@
 				9F0F2AF72A90CBE60051534A /* ButtonView.swift in Sources */,
 				9FDCC08E2A8E313600344E96 /* CreateAccountView.swift in Sources */,
 				9F0D22002AAF76CA008E3DCE /* UpcomingModelBO.swift in Sources */,
+				9F0D22072AAF79D6008E3DCE /* CinemaView.swift in Sources */,
 				9F0F2AE92A8F85A60051534A /* CreateAccountViewModel.swift in Sources */,
 				9F0D22042AAF77B1008E3DCE /* UpcomingRepository.swift in Sources */,
 				9F0F2AE52A8E345F0051534A /* LoginViewModel.swift in Sources */,
+				9F0D22092AAF79DF008E3DCE /* CinemaViewModel.swift in Sources */,
 				9FF0E5622AAB0DFD0043881E /* TopRatedMoviesModelDTO.swift in Sources */,
 				9FBE2AFA2AAF32B60010E246 /* Util.swift in Sources */,
 				9FBE2AF52AAEFBDF0010E246 /* TopRatedMovieRow.swift in Sources */,
