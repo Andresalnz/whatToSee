@@ -42,6 +42,7 @@ struct HomeView: View {
         .onAppear {
             viewModel.loadUI()
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
