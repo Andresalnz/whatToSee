@@ -10,7 +10,7 @@
 		9F0D21FE2AAF7666008E3DCE /* UpcomingModelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D21FD2AAF7665008E3DCE /* UpcomingModelDTO.swift */; };
 		9F0D22002AAF76CA008E3DCE /* UpcomingModelBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D21FF2AAF76CA008E3DCE /* UpcomingModelBO.swift */; };
 		9F0D22022AAF7716008E3DCE /* UpcomingMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D22012AAF7716008E3DCE /* UpcomingMapper.swift */; };
-		9F0D22042AAF77B1008E3DCE /* UpcomingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D22032AAF77B1008E3DCE /* UpcomingRepository.swift */; };
+		9F0D22042AAF77B1008E3DCE /* CinemaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D22032AAF77B1008E3DCE /* CinemaRepository.swift */; };
 		9F0D22072AAF79D6008E3DCE /* CinemaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D22062AAF79D6008E3DCE /* CinemaView.swift */; };
 		9F0D22092AAF79DF008E3DCE /* CinemaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0D22082AAF79DF008E3DCE /* CinemaViewModel.swift */; };
 		9F0F2AE52A8E345F0051534A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F2AE42A8E345F0051534A /* LoginViewModel.swift */; };
@@ -57,7 +57,7 @@
 		9F0D21FD2AAF7665008E3DCE /* UpcomingModelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingModelDTO.swift; sourceTree = "<group>"; };
 		9F0D21FF2AAF76CA008E3DCE /* UpcomingModelBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingModelBO.swift; sourceTree = "<group>"; };
 		9F0D22012AAF7716008E3DCE /* UpcomingMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMapper.swift; sourceTree = "<group>"; };
-		9F0D22032AAF77B1008E3DCE /* UpcomingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingRepository.swift; sourceTree = "<group>"; };
+		9F0D22032AAF77B1008E3DCE /* CinemaRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaRepository.swift; sourceTree = "<group>"; };
 		9F0D22062AAF79D6008E3DCE /* CinemaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaView.swift; sourceTree = "<group>"; };
 		9F0D22082AAF79DF008E3DCE /* CinemaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaViewModel.swift; sourceTree = "<group>"; };
 		9F0F2AE42A8E345F0051534A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 		9F0D21F52AAF6DD2008E3DCE /* Cinema */ = {
 			isa = PBXGroup;
 			children = (
-				9F0D22032AAF77B1008E3DCE /* UpcomingRepository.swift */,
+				9F0D22032AAF77B1008E3DCE /* CinemaRepository.swift */,
 			);
 			path = Cinema;
 			sourceTree = "<group>";
@@ -158,6 +158,16 @@
 				9F0F2AF82A90DBB60051534A /* SeparatorWithOrView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		9F3037142ACB07E700E03550 /* Upcoming */ = {
+			isa = PBXGroup;
+			children = (
+				9FAD54D32AAF68940010954F /* DTO */,
+				9FAD54D22AAF688D0010954F /* BO */,
+				9FAD54D12AAF687F0010954F /* Mapper */,
+			);
+			path = Upcoming;
 			sourceTree = "<group>";
 		};
 		9F629B202AA35B8A00FF6472 /* PopularMovies */ = {
@@ -230,9 +240,7 @@
 		9FAD54D02AAF68230010954F /* Cinema */ = {
 			isa = PBXGroup;
 			children = (
-				9FAD54D32AAF68940010954F /* DTO */,
-				9FAD54D22AAF688D0010954F /* BO */,
-				9FAD54D12AAF687F0010954F /* Mapper */,
+				9F3037142ACB07E700E03550 /* Upcoming */,
 			);
 			path = Cinema;
 			sourceTree = "<group>";
@@ -528,7 +536,7 @@
 				9F0D22002AAF76CA008E3DCE /* UpcomingModelBO.swift in Sources */,
 				9F0D22072AAF79D6008E3DCE /* CinemaView.swift in Sources */,
 				9F0F2AE92A8F85A60051534A /* CreateAccountViewModel.swift in Sources */,
-				9F0D22042AAF77B1008E3DCE /* UpcomingRepository.swift in Sources */,
+				9F0D22042AAF77B1008E3DCE /* CinemaRepository.swift in Sources */,
 				9F0F2AE52A8E345F0051534A /* LoginViewModel.swift in Sources */,
 				9F0D22092AAF79DF008E3DCE /* CinemaViewModel.swift in Sources */,
 				9FF0E5622AAB0DFD0043881E /* TopRatedMoviesModelDTO.swift in Sources */,
