@@ -34,10 +34,9 @@ struct CinemaView: View {
                 }
                 Text("Cartelera")
                     .font(.title)
-                    .padding(12)
+                    .padding(20)
                 LazyVGrid (columns: columns, spacing: 50) {
-                    
-                    ForEach(viewModel.upcomingCinema, id: \.id) { movie in
+                    ForEach(viewModel.nowPlayingCinema, id: \.id) { movie in
                         if let poster  = movie.posterPath {
                             AsyncImage(url: URL(string: "\(Constants.buildImage)\(poster)")) { image in
                                 image.resizable()
