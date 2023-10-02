@@ -24,6 +24,7 @@ final class Util {
         
         //Upcoming
         case upcoming
+        case nowPlaying
         
         func shapeURLHome() -> URL? {
             switch self {
@@ -35,6 +36,8 @@ final class Util {
                     return URL(string: "\(Constants.TMDBuri)\(Constants.topRatedMovies)\(Constants.apiKey)")
                 case .upcoming:
                     return URL(string: "\(Constants.TMDBuri)\(Constants.upcoming)\(Constants.apiKey)")
+                case .nowPlaying:
+                    return URL(string: "\(Constants.TMDBuri)\(Constants.nowPlaying)\(Constants.apiKey)")
             }
         }
     }

@@ -16,4 +16,5 @@ struct Constants {
     static let genresMovies: String = "genre/movie/list"
     static let apiKey: String = "?api_key=\(Util.getApiKey())"
     static let upcoming: String = "movie/upcoming"
+    static let nowPlaying: String = "movie/now_playing"
 }
