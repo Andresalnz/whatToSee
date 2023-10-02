@@ -23,7 +23,8 @@ struct WhatToSeeApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
         WindowGroup {
-            LoginView(viewModel: LoginViewModel())
+            LoginView(viewModel: LoginViewModel(), viewModelHome: HomeViewModel())
+            //HomeView(viewModel: HomeViewModel())
         }
     }
 }
