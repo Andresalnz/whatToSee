@@ -31,6 +31,7 @@ struct CinemaView: View {
                             }
                         }
                     }
+                    .padding(.leading ,20)
                 }
                 Text("Cartelera")
                     .font(.title)
@@ -53,7 +54,6 @@ struct CinemaView: View {
                     
                 }
             }
-            .padding(.bottom, 200)
             .onAppear {
                 viewModel.loadUI()
             }
