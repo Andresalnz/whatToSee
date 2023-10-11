@@ -42,7 +42,7 @@ struct CinemaView: View {
                             AsyncImage(url: URL(string: "\(Constants.buildImage)\(poster)")) { image in
                                     image.resizable()
                                     
-                                    .frame(width: 360, height: 200)
+                                    .frame(width: 360, height: 300)
                                     .scaledToFit()
                                     .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
                                     .overlay {
@@ -52,7 +52,7 @@ struct CinemaView: View {
                                                 .background(Color.black)
                                                 .foregroundStyle(.white)
                                                 .frame(maxWidth: .infinity, alignment: .leading)
-                                                .padding(.bottom, 100)
+                                                .padding(.bottom, 200)
                                                 .padding(.leading, 10)
                                                 
                                             
@@ -65,7 +65,8 @@ struct CinemaView: View {
                                         ButtonView(title: "Comprar entradas", font: .body, foregroundColor: .white, backgroundColor: .gray, width: 330, height: 30) {
                                             print("TAP")
                                         }
-                                        .padding(.top, 150)
+                                        .opacity(0.8)
+                                        .padding(.top, 250)
                                        
                                       
                                     }
