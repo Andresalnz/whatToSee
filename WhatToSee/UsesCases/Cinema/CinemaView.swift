@@ -10,7 +10,7 @@ import SwiftUI
 struct CinemaView: View {
     @StateObject var viewModel: CinemaViewModel
     
-    let columns = [GridItem(.flexible()), GridItem(.flexible())]
+    let columns = [GridItem(.flexible())]
     
     var body: some View {
         ScrollView {
@@ -40,14 +40,39 @@ struct CinemaView: View {
                     ForEach(viewModel.nowPlayingCinema, id: \.id) { movie in
                         if let poster  = movie.posterPath {
                             AsyncImage(url: URL(string: "\(Constants.buildImage)\(poster)")) { image in
-                                image.resizable()
-                                    .frame(width: 100, height: 150)
-                                ButtonView(title: "Comprar entradas", font: .body, foregroundColor: .black, backgroundColor: .gray, width: 150, height: 30) {
-                                    print("TAP")
-                                }
+                                    image.resizable()
+                                    
+                                    .frame(width: 360, height: 200)
+                                    .scaledToFit()
+                                    .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
+                                    .overlay {
+                                        VStack() {
+                                            Text(movie.originalTitle ?? "No title")
+                                                .bold()
+                                                .background(Color.black)
+                                                .foregroundStyle(.white)
+                                                .frame(maxWidth: .infinity, alignment: .leading)
+                                                .padding(.bottom, 100)
+                                                .padding(.leading, 10)
+                                                
+                                            
+                                           
+                                        }
+                                       
+                                        .padding(.bottom, 70)
+                                        
+                                        
+                                        ButtonView(title: "Comprar entradas", font: .body, foregroundColor: .white, backgroundColor: .gray, width: 330, height: 30) {
+                                            print("TAP")
+                                        }
+                                        .padding(.top, 150)
+                                       
+                                      
+                                    }
                             } placeholder: {
                                 ProgressView()
                             }
+                          
                         }
                         
                     }
