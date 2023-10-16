@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CinemaView: View {
+    
     @StateObject var viewModel: CinemaViewModel
     
     var body: some View {
@@ -29,9 +30,7 @@ struct CinemaView: View {
                 VStack(spacing: 20) {
                     ForEach(viewModel.nowPlayingCinema, id: \.id) { movie in
                         NowPlayingRowView(movieNowPlaying: movie)
-                        
                     }
-                    
                 }
             }
             .padding(.horizontal, 20)
