@@ -21,14 +21,7 @@ struct CinemaView: View {
                 ScrollView(.horizontal) {
                     HStack {
                         ForEach(viewModel.upcomingCinema, id: \.id) { movie in
-                            if let poster  = movie.posterPath {
-                                AsyncImage(url: URL(string: "\(Constants.buildImage)\(poster)")) { image in
-                                    image.resizable()
-                                        .frame(width: 300, height: 400)
-                                } placeholder: {
-                                    ProgressView()
-                                }
-                            }
+                            UpcomingRowView(movieUpcoming: movie)
                         }
                     }
                     .padding(.leading ,20)
