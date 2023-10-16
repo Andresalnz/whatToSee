@@ -29,6 +29,8 @@
 		9F629B252AA3619900FF6472 /* GenresMoviesModelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F629B242AA3619900FF6472 /* GenresMoviesModelDTO.swift */; };
 		9F629B272AA3630900FF6472 /* PopularMoviesMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F629B262AA3630900FF6472 /* PopularMoviesMapper.swift */; };
 		9F629B312AA6401200FF6472 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F629B302AA6401200FF6472 /* HomeRepository.swift */; };
+		9F7E27A92ADD49D80008A29D /* UpcomingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E27A82ADD49D80008A29D /* UpcomingRowView.swift */; };
+		9F7E27AB2ADD84590008A29D /* NowPlayingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E27AA2ADD84590008A29D /* NowPlayingRowView.swift */; };
 		9FBE2AF02AAC906D0010E246 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBE2AEF2AAC906D0010E246 /* Constants.swift */; };
 		9FBE2AF32AAEFAD30010E246 /* PopularMovieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBE2AF22AAEFAD30010E246 /* PopularMovieRow.swift */; };
 		9FBE2AF52AAEFBDF0010E246 /* TopRatedMovieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBE2AF42AAEFBDF0010E246 /* TopRatedMovieRow.swift */; };
@@ -79,6 +81,8 @@
 		9F629B242AA3619900FF6472 /* GenresMoviesModelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresMoviesModelDTO.swift; sourceTree = "<group>"; };
 		9F629B262AA3630900FF6472 /* PopularMoviesMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesMapper.swift; sourceTree = "<group>"; };
 		9F629B302AA6401200FF6472 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
+		9F7E27A82ADD49D80008A29D /* UpcomingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingRowView.swift; sourceTree = "<group>"; };
+		9F7E27AA2ADD84590008A29D /* NowPlayingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingRowView.swift; sourceTree = "<group>"; };
 		9FBE2AEF2AAC906D0010E246 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9FBE2AF22AAEFAD30010E246 /* PopularMovieRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieRow.swift; sourceTree = "<group>"; };
 		9FBE2AF42AAEFBDF0010E246 /* TopRatedMovieRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMovieRow.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 		9F0D22052AAF79C6008E3DCE /* Cinema */ = {
 			isa = PBXGroup;
 			children = (
+				9F7E27A72ADD49990008A29D /* Rows */,
 				9F0D22062AAF79D6008E3DCE /* CinemaView.swift */,
 				9F0D22082AAF79DF008E3DCE /* CinemaViewModel.swift */,
 			);
@@ -275,6 +280,15 @@
 				9F0D21F42AAF6DC9008E3DCE /* Home */,
 			);
 			path = TMDBRepository;
+			sourceTree = "<group>";
+		};
+		9F7E27A72ADD49990008A29D /* Rows */ = {
+			isa = PBXGroup;
+			children = (
+				9F7E27A82ADD49D80008A29D /* UpcomingRowView.swift */,
+				9F7E27AA2ADD84590008A29D /* NowPlayingRowView.swift */,
+			);
+			path = Rows;
 			sourceTree = "<group>";
 		};
 		9FAD54D02AAF68230010954F /* Cinema */ = {
@@ -559,6 +573,7 @@
 				9F0D22022AAF7716008E3DCE /* UpcomingMapper.swift in Sources */,
 				9FF0E5662AAB0E820043881E /* TopRatedMoviesMapper.swift in Sources */,
 				9F0F2AF52A90C9120051534A /* SecureFieldView.swift in Sources */,
+				9F7E27A92ADD49D80008A29D /* UpcomingRowView.swift in Sources */,
 				9FDDD18C2A8CE5440037F36D /* ContentView.swift in Sources */,
 				9F0F2AEC2A8F89C70051534A /* HomeView.swift in Sources */,
 				9F629B252AA3619900FF6472 /* GenresMoviesModelDTO.swift in Sources */,
@@ -586,6 +601,7 @@
 				9FBE2AFA2AAF32B60010E246 /* Util.swift in Sources */,
 				9FBE2AF52AAEFBDF0010E246 /* TopRatedMovieRow.swift in Sources */,
 				9F30371D2ACB0B6700E03550 /* NowPlayingModelBO.swift in Sources */,
+				9F7E27AB2ADD84590008A29D /* NowPlayingRowView.swift in Sources */,
 				9F0F2AF32A90C5120051534A /* TextFieldView.swift in Sources */,
 				9F629B272AA3630900FF6472 /* PopularMoviesMapper.swift in Sources */,
 				9FBE2AF32AAEFAD30010E246 /* PopularMovieRow.swift in Sources */,
