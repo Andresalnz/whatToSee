@@ -15,7 +15,6 @@ struct UpcomingRowView: View {
         if let poster  = movieUpcoming?.posterPath {
             AsyncImage(url: URL(string: "\(Constants.buildImage)\(poster)")) { image in
                 image.resizable()
-                    .frame(width: 300, height: 400)
             } placeholder: {
                 ProgressView()
             }
